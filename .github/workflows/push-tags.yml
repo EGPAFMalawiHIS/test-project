@@ -12,20 +12,15 @@ jobs:
       - name: Checkout source repository
         uses: actions/checkout@v3
 
-      - name: Set up Git for remote repository
+      - name: Set Github Access Token
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
         run: |
-          git config --global user.name 'Github Actions'
-          git config --global user.email 'roychanunkha@gmail.com'
-
+          echo "GitHub access token: $GITHUB_TOKEN"
 
       - name: Add destination repository as remote
         run: |
           git remote add destination https://github.com/HISMalawi/test-project-releases.git
-
-      - name: Set PAT as access token
-        run: echo ${{ secrets.PAT }} | git config credential.helper 'cache'
-        env:
-          PAT: ${{ secrets.PAT }}
 
       - name: Push tags to destination repository
         run: |
