@@ -17,9 +17,15 @@ jobs:
           git config --global user.name 'Github Actions'
           git config --global user.email 'roychanunkha@gmail.com'
 
+
       - name: Add destination repository as remote
         run: |
-          git remote add destination https://github.com/HISMalawi/test-project-releases/
+          git remote add destination https://github.com/HISMalawi/test-project-releases.git
+
+      - name: Set PAT as access token
+        run: echo ${{ secrets.PAT }} | git config credential.helper 'cache'
+        env:
+          PAT: ${{ secrets.PAT }}
 
       - name: Push tags to destination repository
         run: |
