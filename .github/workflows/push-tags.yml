@@ -20,7 +20,7 @@ jobs:
 
       - name: Add destination repository as remote
         run: |
-          git remote add destination https://github.com/HISMalawi/test-project-releases.git
+          git remote add destination https://github.com/KuyeselaOrganization/test-project-releases.git
 
       - name: Push tags to destination repository
         run: |
