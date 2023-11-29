@@ -19,7 +19,7 @@ jobs:
 
       - name: Add destination repository as remote
         run: |
-          git remote add destination https://github.com/HISMalawi/test-project-releases.git
+          git remote add destination https://github.com/HISMalawi/test-project-releases/
 
       - name: Push tags to destination repository
         run: |
