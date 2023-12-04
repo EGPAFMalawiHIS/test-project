@@ -18,6 +18,10 @@ app.delete("/", (req, res) => {
   res.send("Got a DELETE request");
 });
 
+app.patch("/", (req, res) => {
+  res.send("Got a PATCH request");
+});
+
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });
