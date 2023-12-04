@@ -10,17 +10,14 @@ jobs:
 
     steps:
       - name: Checkout source repository
-        uses: actions/checkout@v3
-
-      - name: Set Github Access Token
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
-        run: |
-          echo "GitHub access token: $GITHUB_TOKEN"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.PAT }}
 
       - name: Add destination repository as remote
         run: |
-          git remote add destination https://${{ secrets.PAT }}@github.com/KuyeselaOrganization/test-project-releases.git
+          git remote add destination https://github.com/KuyeselaOrganization/test-project-releases.git
 
       - name: Push tags to destination repository
         run: |
