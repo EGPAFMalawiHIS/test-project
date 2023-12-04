@@ -1,0 +1,27 @@
+name: Push Tag to Public Repo
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  push-tag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'Roy Chanunkha'
+          git config --global user.email 'roychanunkha@gmail.com'
+
+      - name: Push Tag to Public Repo
+        run: |
+          git tag ${{ github.ref_name }}
+          git push https://${{ secrets.PAT }}@github.com/KuyeselaOrganization/test-project-releases.git ${{ github.ref_name }}
+        env:
+          SOURCE_REPO: ${{ github.repository }}
+
