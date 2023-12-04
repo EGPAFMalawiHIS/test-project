@@ -21,5 +21,4 @@ jobs:
 
       - name: Push tags to destination repository
         run: |
-          git fetch --tags destination
-          git push destination --tags
+          git push destination ${{ github.ref_name }}
