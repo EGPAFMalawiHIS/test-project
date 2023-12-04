@@ -7,7 +7,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
-  res.send("Got a POST request");
+  res.send("Got a perfect POST request");
 });
 
 app.put("/", (req, res) => {
