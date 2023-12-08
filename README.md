@@ -3,7 +3,7 @@ This is just a test project to automate deployments of tags to other
 
 # Push Tags to Destination Repo GitHub Action
 
-This GitHub Action is designed to push tags from a source repository to a destination repository. It is triggered on any tag push to the source repository.
+This GitHub Action is designed to push tags from a source repository to a destination repository. It is triggered on any tag push to the source repository. The workflow is in the ```.github/workflows``` directory under the name ```push-tags.yml```
 
 ## Workflow Details
 
