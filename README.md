@@ -21,8 +21,8 @@ To use this workflow, you need to:
 
 1. Copy the `push-tags.yml` file to the `.github/workflows` directory in your source repository.
 2. Set up the following secrets in your source repository:
-   - `PAT`: A Personal Access Token with the necessary permissions to checkout the source repository and push to the destination repository.
-   - `DESTINATION_REPO_URL`: The URL of the destination repository.
+   - `PAT`: A Personal Access Token with the necessary permissions to checkout the source repository and push to the destination repository. For the PAT, @sulemartin87 will eventually add it in all repos
+   - `DESTINATION_REPO_URL`: The URL of the destination repository. Currently the destination repo is this ```https://github.com/HISMalawi/test-project-releases.git```
 
 Please note that this workflow runs on the latest version of Ubuntu.
 
