@@ -1,11 +1,13 @@
 # test-project
-This is just a test project to automate deployments of tags to other
+This is just a test project to get us wet on how to use GitHub Actions. The following are the current workflows in this project:
+1. push-tags.yml
+2. code-reviews.yml
 
-# Push Tags to Destination Repo GitHub Action
+## Push Tags to Destination Repo GitHub Action
 
 This GitHub Action is designed to push tags from a source repository to a destination repository. It is triggered on any tag push to the source repository. The workflow is in the ```.github/workflows``` directory under the name ```push-tags.yml```
 
-## Workflow Details
+### Workflow Details
 
 The workflow consists of three main steps:
 
@@ -15,7 +17,7 @@ The workflow consists of three main steps:
 
 3. **Push tags to destination repository**: This step pushes the tags from the source repository to the destination repository using the `git push` command. The tag name is obtained from the `github.ref_name` context.
 
-## Setup
+### Setup
 
 To use this workflow, you need to:
 
@@ -26,13 +28,13 @@ To use this workflow, you need to:
 
 Please note that this workflow runs on the latest version of Ubuntu.
 
-## Usage
+### Usage
 
 Once set up, this workflow will automatically run whenever a new tag is pushed to your source repository. It will push the same tag to the destination repository.# Push Tags to Destination Repo GitHub Action
 
 This GitHub Action is designed to push tags from a source repository to a destination repository. It is triggered on any tag push to the source repository.
 
-## Workflow Details
+### Workflow Details
 
 The workflow consists of three main steps:
 
@@ -42,7 +44,7 @@ The workflow consists of three main steps:
 
 3. **Push tags to destination repository**: This step pushes the tags from the source repository to the destination repository using the `git push` command. The tag name is obtained from the `github.ref_name` context.
 
-## Setup
+### Setup
 
 To use this workflow, you need to:
 
@@ -53,6 +55,6 @@ To use this workflow, you need to:
 
 Please note that this workflow runs on the latest version of Ubuntu.
 
-## Usage
+### Usage
 
 Once set up, this workflow will automatically run whenever a new tag is pushed to your source repository. It will push the same tag to the destination repository.
